@@ -88,8 +88,6 @@ def transform_google_play_apps(df_apps: pd.DataFrame) -> pd.DataFrame:
     df_apps_transformed['Genres'] = df_apps_transformed['Genres'].apply(lambda x: x.split(';')[0] if isinstance(x, str) else x)
 
 
-# O que essa linha faz definitivamente?
-
     # Esta linha remove linhas do DataFrame onde a coluna Category contém valores inválidos ou desalinhados que não representam uma categoria de texto real. Um exemplo notório neste dataset é uma linha onde "1.9" aparece na coluna Category, indicando um erro de parsing
     # df_apps_transformed[...]: Isso é chamado de indexação booleana ou filtragem booleana. O que está dentro dos colchetes é uma série de valores True ou False. Apenas as linhas onde o valor é True são mantidas no DataFrame
 
